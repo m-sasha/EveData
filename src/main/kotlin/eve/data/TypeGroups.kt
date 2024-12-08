@@ -68,6 +68,7 @@ class TypeGroups internal constructor(groups: Collection<TypeGroup>): Collection
     val bombLauncher = get("Missile Launcher Bomb")
     val interdictionSphereLauncher = get("Interdiction Sphere Launcher")
     val scanProbeLauncher = get("Scan Probe Launcher")
+    val breacherPodLauncher = get("Breacher Pod Launchers")
 
     val energyWeapon = get("Energy Weapon")
     val hybridWeapon = get("Hybrid Weapon")

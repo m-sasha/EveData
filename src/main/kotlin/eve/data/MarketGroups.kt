@@ -153,5 +153,8 @@ class MarketGroups internal constructor(
     val shieldRigs = get(965)
     val armorRigs = get(956)
     val scripts = get(1094)
+    val logistics = get(437)
+    val logisticsFrigates = get(2146)
+    val forceAuxiliaries = get (2271)
 
 }

@@ -116,6 +116,13 @@ fun ModuleType.isEntropicDisintegrator() = group == groups.precursorWeapon
 
 
 /**
+ * Returns whether the module is a Breacher Pod launcher.
+ */
+context(EveData)
+fun ModuleType.isBreacherPodLauncher() = group == groups.breacherPodLauncher
+
+
+/**
  * Returns whether the module is a scan probe launcher.
  */
 context(EveData)

@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm") version "2.0.20"
     id("org.jetbrains.kotlin.plugin.compose") version "2.0.20"
     id("org.jetbrains.compose") version "1.6.11"
-    id("de.undercouch.download") version "5.4.0"  // Download task
+    id("de.undercouch.download") version "5.6.0"  // Download task
 }
 
 repositories {

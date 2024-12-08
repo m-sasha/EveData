@@ -631,7 +631,7 @@ private fun DataInputStream.readMutaplasmid(@Suppress("UNUSED_PARAMETER") contex
         val highIsGood = readUnsignedByte()
         return AttributeMutation(
             attributeId = attributeId,
-            range = min .. max,
+            factorRange = min .. max,
             highIsGood = when (highIsGood) {
                 0 -> null
                 1 -> true
@@ -1250,8 +1250,8 @@ class EveData internal constructor(
      * The abyssal item replacements.
      */
     private val abyssalItemReplacement: Map<String, ModuleOrDroneType> =
-        abyssalItemReplacementIds.mapValues { (_, typeId) ->
-            (moduleTypeById[typeId] ?: droneTypeById[typeId]) ?: error("Missing abyssal replacement type id $typeId")
+        abyssalItemReplacementIds.mapValues { (name, typeId) ->
+            (moduleTypeById[typeId] ?: droneTypeById[typeId]) ?: error("Missing abyssal replacement for $name, type id: $typeId")
         }
 
 

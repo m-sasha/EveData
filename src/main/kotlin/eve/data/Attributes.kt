@@ -510,6 +510,7 @@ internal interface AttributeType<T>{
 /**
  * Groups all dogma attributes, and provides some of them via explicit properties.
  */
+@Suppress("unused")
 class Attributes internal constructor(
     attributes: Iterable<Attribute<Double>>
 ): Iterable<Attribute<Double>> by attributes{
@@ -941,6 +942,11 @@ class Attributes internal constructor(
     val repairMultiplierBonusPerCycle = update("repairMultiplierBonusPerCycle", DOUBLE)  // bonus per cycle
     val damageMultiplierBonusMax = update("damageMultiplierBonusMax", DOUBLE)  // multiplier bonus at max spools
     val repairMultiplierBonusMax = update("repairMultiplierBonusMax", DOUBLE)  // multiplier bonus at max spools
+
+    // Breacher pod and SCARAB (dot = damage over time)
+    val dotMaxDamagePerTick = update("dotMaxDamagePerTick", DOUBLE)
+    val dotMaxHpPctDamagePerTick = update("dotMaxHPPercentagePerTick", DOUBLE)
+    val dotDuration = update("dotDuration", DOUBLE)
 
     // Cloaks
     val stabilizeCloakDuration = update("stabilizeCloakDuration", DOUBLE)

@@ -104,7 +104,7 @@ data class AttributeMutation(
     /**
      * The range of values for the factor by which the attribute is multiplied.
      */
-    val range: ClosedFloatingPointRange<Double>,
+    val factorRange: ClosedFloatingPointRange<Double>,
 
 
     /**
@@ -122,9 +122,9 @@ data class AttributeMutation(
      */
     fun attributeValueRange(baseValue: Double): ClosedFloatingPointRange<Double> {
         return if (baseValue < 0)
-            range.endInclusive * baseValue .. range.start * baseValue
+            factorRange.endInclusive * baseValue .. factorRange.start * baseValue
         else
-            range.start * baseValue .. range.endInclusive * baseValue
+            factorRange.start * baseValue .. factorRange.endInclusive * baseValue
     }
 
 
